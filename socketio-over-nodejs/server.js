@@ -6,12 +6,12 @@ var fs = require('fs');
 var options = {
     // key: fs.readFileSync('fake-keys/privatekey.pem'),
     // cert: fs.readFileSync('fake-keys/certificate.pem')
-    key: fs.readFileSync('/etc/letsencrypt/live/webrtcweb.com/privkey.pem'),
-    cert: fs.readFileSync('/etc/letsencrypt/live/webrtcweb.com/fullchain.pem')
+    //key: fs.readFileSync('/etc/letsencrypt/live/webrtcweb.com/privkey.pem'),
+    //cert: fs.readFileSync('/etc/letsencrypt/live/webrtcweb.com/fullchain.pem')
 };
 
 // HTTPs server
-var app = require('https').createServer(options, function(request, response) {
+var app = require('http').createServer(options, function(request, response) {
     response.writeHead(200, {
         'Content-Type': 'text/html'
     });
